@@ -1,0 +1,895 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    /* background-color: red; */
+}
+nav{
+    width: 100%;
+    height: 70px;
+}
+
+nav .logo_links_helpline{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo_links_helpline .logo_links{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+nav .logo_links_helpline .logo_links .logo{
+    width: 25%;
+    height: 100%;
+}
+nav .logo_links_helpline .logo_links .logo img{
+    width: 100%;
+    height: 100%;
+}
+nav .logo_links_helpline .logo_links .links{
+    width: 70%;
+    height: 100%;
+}
+nav .logo_links_helpline .logo_links .links ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+}
+nav .logo_links_helpline .logo_links .links > ul li{
+    position: relative;
+}
+
+nav .logo_links_helpline .logo_links .links > ul li a{
+    padding: 25px 10px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    color: #000;
+}
+nav .logo_links_helpline .logo_links .links > ul li a::after{
+    content: "";
+    width: 0.5px;
+    height: 20px;
+    background-color: #000;
+    position: absolute;
+    top: 20px;
+    right: -2px;
+}
+nav .logo_links_helpline .logo_links .links ul li:last-child a::after{
+    background: transparent;
+}
+
+#nav_drop{
+    position: absolute;
+    width: 150px;
+    height: 0;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.384);
+    border-radius: 4px;
+    top: 30px;
+    transition: all 0.3s linear;
+    transition-delay: 0.05s;
+    overflow: hidden;
+    z-index: 1;
+}
+#drop:hover #nav_drop{
+    height: 240px;
+}
+#nav_drop ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#nav_drop ul li{
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid rgb(147, 145, 145);
+}
+#nav_drop ul li a{
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    padding: 0px 10px;
+}
+#nav_drop ul li:last-child{
+    border-bottom: none;
+}
+nav .logo_links_helpline .logo_links .links ul > li a:hover{
+    color: chocolate;
+}
+nav .logo_links_helpline .logo_links .links ul > li a:hover{
+    border-bottom: 5px solid chocolate;
+}
+.active{
+    color: chocolate !important;
+    border-bottom: 5px solid chocolate;
+}
+#nav_drop ul li a{
+    border-bottom: none;
+}
+nav .logo_links_helpline .helpline{
+    width: 20%;
+    height: 100%;
+    text-align: right;
+    font-size: 13px;
+}
+nav .logo_links_helpline .helpline .support{
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+nav .logo_links_helpline .helpline .support p{
+    cursor: pointer;
+    width: 100%;
+    line-height: 35px;
+}
+
+nav .logo_links_helpline .helpline .support #support_drop_down{
+    width: 80%;
+    text-align: left;
+    position: absolute;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.384);
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    z-index: 2;
+}
+#support_drop:hover #support_drop_down{
+    height: 70px;
+}
+nav .logo_links_helpline .helpline .support #support_drop_down ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+nav .logo_links_helpline .helpline .support #support_drop_down ul li{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid rgb(147, 145, 145);
+    cursor: pointer;
+}
+nav .logo_links_helpline .helpline .support #support_drop_down ul li:last-child{
+    border-bottom: none;
+}
+nav .logo_links_helpline .helpline .support p > i,nav .logo_links_helpline .helpline .myaccount p > i{
+    color: rgb(138, 138, 138);
+}
+nav .logo_links_helpline .helpline .myaccount{
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+nav .logo_links_helpline .helpline .myaccount p{
+    cursor: pointer;
+    width: 100%;
+    line-height: 35px;
+}
+
+nav .logo_links_helpline .helpline .myaccount #account_drop_down{
+    width: 80%;
+    text-align: left;
+    position: absolute;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.384);
+    right: 0;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    z-index: 1;
+}
+nav .logo_links_helpline .helpline #account_drop:hover #account_drop_down{
+    height: 180px;
+}
+nav .logo_links_helpline .helpline .myaccount #account_drop_down ul{
+    width: 100%;
+    height: 100%;
+}
+nav .logo_links_helpline .helpline .myaccount #account_drop_down ul li{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 10px;
+    font-size: 11px;
+    border-bottom: 1px solid rgb(138, 138, 138);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+nav .logo_links_helpline .helpline .myaccount #account_drop_down ul li:last-child{
+    border-bottom: none;
+}
+nav .logo_links_helpline .helpline .myaccount #account_drop_down ul li.login_btn{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+nav .logo_links_helpline .helpline .myaccount #account_drop_down ul li.login_btn a{
+    width: 100%;
+    padding: 7px 40px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid chocolate;
+    color: chocolate;
+    text-decoration: none;
+}
+nav .logo_links_helpline .helpline .myaccount #account_drop_down ul li.login_btn a:hover{
+    background-color: chocolate;
+    color: #fff;
+}
+nav .logo_links_helpline .helpline .myaccount #account_drop_down ul li span{
+    transition: all 0.3s linear;
+}
+nav .logo_links_helpline .helpline .myaccount #account_drop_down ul li .fa-indian-rupee-sign{
+   float: right;
+   line-height: 40px;
+}
+nav .logo_links_helpline .helpline .myaccount #account_drop_down ul li:hover span{
+    margin-left: 7px;   
+}
+
+
+/* Section Details */
+section{
+    width: 100%;
+    background-color: #eee;
+    position: relative;
+}
+section .strip{
+    width: 100%;
+    height: 30px;
+    padding: 0px 4em;
+}
+section .strip p{
+    line-height: 30px;
+    font-size: 13px;
+}
+section .strip p i{
+    color: #aaa;
+    margin: 0px 10px;
+    font-size: 16px;
+    line-height: 30px;
+}
+section .details{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+}
+section .details .details_left{
+    width: 70%;
+    height: 100%;
+}
+section .details .price_detials{
+    position: -webkit-sticky;
+    position: sticky;
+    height: 100vh;
+    width: 25%;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section .details .price_detials .price_summary , section .details .price_detials .coupon_voucher{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.384);
+
+}
+section .details .price_detials .price_heading{
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 3px 15px 15px;
+}
+section .details .price_detials .price_area{
+    width: 100%;
+}
+section .details .price_detials .price_area p{
+    width: 100%;
+    border-bottom: 1px solid rgb(206, 205, 205);
+    height: 35px;
+    line-height: 35px;
+    padding: 0px 10px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+section .details .price_detials .price_area p:last-child{
+    border-bottom: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: chocolate;
+}
+section .details .price_detials .coupon_voucher .coupon_heading{
+    width: 100%;
+    background-color: #2196f3 ;
+    color: #fff;  
+    padding: 12px ;
+    font-size: 14px;
+}
+section .details .price_detials .coupon_voucher .coupon_apply{
+    width: 100%;
+    padding: 12px;
+    border-bottom: 0.5px solid rgb(138, 138, 138);
+}
+section .details .price_detials .coupon_voucher .coupon_apply .applied{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+section .details .price_detials .coupon_voucher .coupon_apply .applied .applied_coupoun
+{
+    width: 60%;
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: chocolate;
+    padding-bottom: 5px;
+    border-bottom: 0.5px solid rgb(138, 138, 138);
+}
+
+section .details .price_detials .coupon_voucher .coupon_apply .applied .clear_btn{
+    width: 35%;
+    border: 0.5px solid #ddd;
+    font-size: 12px;
+    line-height: 12px;
+    display: flex;
+    justify-content: space-around;
+    padding: 7px 0px;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+section .details .price_detials .coupon_voucher .coupon_apply .applied .clear_btn i{
+    font-size: 10px;
+}
+section .details .price_detials .coupon_voucher .coupon_apply .congrats p{
+    width: 100%;
+    margin-top: 5px;
+    font-size: 10px;
+    color: #1A942B ;
+}
+section .details .price_detials .coupon_voucher .coupouns{
+    width: 100%;
+    margin: 0px 10px;
+}
+section .details .price_detials .coupon_voucher .coupouns .coupon{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 0.5px solid rgb(206, 205, 205);
+    padding-bottom: 5px;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+section .details .price_detials .coupon_voucher .coupouns .coupon:last-child{
+    border-bottom: none;
+}
+section .details .price_detials .coupon_voucher .coupouns .coupon input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+section .details .price_detials .coupon_voucher .coupouns .coupon p,
+section .details .price_detials .coupon_voucher .coupouns .coupon a{
+    font-size: 10px;
+}
+section .details .price_detials .coupon_voucher .coupouns .coupon .coupon_name{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+section .details .price_detials .countinue_booking_btn{
+    width: 100%;
+    height: 50px;
+}
+section .details .price_detials .countinue_booking_btn button{
+    width: 100%;
+    height: 100%;
+    background-color: chocolate;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+section .details .details_left .flight_details{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.384);
+    padding-bottom: 3px;
+    overflow: hidden;
+}
+section .details .details_left .flight_details .flight_detials_head{
+    background-color: rgb(245, 245, 245);
+}
+section .details .details_left .flight_details .flight_detials_head p{
+    padding: 15px 20px;
+    font-size: 17px;
+}
+section .details .details_left .flight_details .flight_detials_head p i{
+    font-size: 25px;
+    margin-right: 5px;
+}
+section .details .details_left .flight_details .destination{
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.384);
+    height: 210px;
+    margin: 20px;
+}
+section .details .details_left .flight_details .destination .tag{
+    background-color: #444;
+    width: 70px;
+    color: #fff;
+    font-size: 11px;
+    line-height: 23px;
+    text-align: center;
+    border-bottom-right-radius: 20px;
+    text-transform: uppercase;
+}
+section .details .details_left .flight_details .destination .destination_details{
+    width: 100%;
+    margin-top: 5px;
+    padding: 0px 10px;
+}
+section .details .details_left .flight_details .destination .destination_details p i{
+    font-size: 25px;
+    line-height: 100%;
+    line-height: 40px;
+    margin-right: 10px;
+}
+section .details .details_left .flight_details .destination .destination_details p .from_to{
+    font-size: 20px;
+}
+section .details .details_left .flight_details .destination .destination_details p .date_time{
+    font-size: 13px;
+    color: #444;
+}
+section .details .details_left .flight_details .terminals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    padding-right: 2rem;
+}
+section .details .details_left .flight_details .terminals .sec_1{
+    width: 115px;
+}
+section .details .details_left .flight_details .terminals .sec_1 .gofirst{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .details .details_left .flight_details .terminals .sec_1 .gofirst img{
+    width: 35px;
+}
+section .details .details_left .flight_details .terminals .sec_1 .gofirst p{
+    font-size: 13px;
+    text-transform: uppercase;
+}
+section .details .details_left .flight_details .terminals .sec_1 .go_first_btn{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 20px;
+}
+section .details .details_left .flight_details .terminals .sec .time{
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+section .details .details_left .flight_details .terminals .sec .from,
+section .details .details_left .flight_details .terminals .sec .to{
+    font-size: 12px;
+    margin-top: 5px;
+}
+section .details .details_left .flight_details .terminals .sec .date_day,
+section .details .details_left .flight_details .terminals .sec .terminal{
+    font-size: 11px;
+    color: #444;
+    margin-top: 5px;
+}
+section .details .details_left .flight_details .terminals .sec_3{
+    /* background-color: tomato; */
+    text-align: center;
+}
+section .details .details_left .flight_details .terminals .sec_3 .tat{
+    font-size: 11px;
+}
+section .details .details_left .flight_details .terminals .sec_3 .refund{
+    /* background-color: #2196f3; */
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+section .details .details_left .flight_details .terminals .sec_3 .refund span{
+    width: 100px;
+    height: 1px;
+    background-color: #ccc;
+    display: inline-block;
+    position: relative;
+}
+section .details .details_left .flight_details .terminals .sec_3 .refund span:first-child::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: #ccc;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    top: -3px;
+}
+section .details .details_left .flight_details .terminals .sec_3 .refund span:last-child::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    background-color: #ccc;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    top: -3px;
+}
+section .details .details_left .flight_details .terminals .sec_3 .refund i{
+    color: #666;
+    background-color: #eee;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 0.2px solid #ccc;
+}
+section .details .details_left .flight_details .terminals .sec_3 .refund_btn{
+    font-size: 11px;
+    color: #3ea74c;
+    width: 100px;
+    margin: auto;
+    height: 18px;
+    line-height: 18px;
+    border: 0.2px solid #1A942B;
+    border-radius: 20px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+section .details .details_left .flight_details .destination .fare_rules{
+    margin-bottom: 50px;
+}
+section .details .details_left .flight_details .destination .fare_rules a{
+    color: #666;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+section .details .details_left .medical_refund_section, section .details .details_left .good_to_know{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin-top: 1.5rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.384);
+    border-radius: 4px;
+    padding: 10px 15px 20px 15px;
+}
+section .details .details_left .medical_refund_section .head{
+    display: flex;
+}
+section .details .details_left .medical_refund_section .head .medical_symbol img{
+    width: 40px;
+}  
+section .details .details_left .medical_refund_section .head .medical_head{
+    margin-left: 10px;
+}
+section .details .details_left .medical_refund_section .head .medical_head .medical_h{
+    display: flex;
+    align-items: center;
+    margin-bottom:5px;
+}
+section .details .details_left .medical_refund_section .head .medical_head .medical_h h2{
+    font-size: 16px;
+    margin-right: 5px;
+    color: #2196f3;
+}
+section .details .details_left .medical_refund_section .head .medical_head p{
+    font-size: 12px;
+}
+section .details .details_left .medical_refund_section .medical_radio{
+    margin-top: 15px;
+}
+section .details .details_left .medical_refund_section .medical_radio .select_radio{
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+section .details .details_left .good_to_know .good_to_know_head{
+    display: flex;
+    align-items: center;
+}
+section .details .details_left .good_to_know .good_to_know_head .good_to_know_heading{
+    margin-left: 10px;
+}
+
+section .details .details_left .good_to_know .good_to_know_head .good_to_know_heading h2{
+    font-size: 15px;
+}
+section .details .details_left .good_to_know .good_to_know_head .good_to_know_heading p{
+    font-size: 12px;
+}
+section .details .details_left .good_to_know .good_to_know_list ul{
+    margin-left: 25px;
+}
+section .details .details_left .good_to_know .good_to_know_list ul li{
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+section .details .details_left .important_info{
+    background-color: #cceff8;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.384);
+    margin-top: 1.4rem;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+section .details .details_left .important_info .important_info_head h2{
+    font-size: 16px;    
+    margin-bottom: 5px;
+}
+section .details .details_left .important_info .important_info_list ul{
+    margin-left: 20px;
+}
+section .details .details_left .important_info .important_info_list ul li{
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+section .details .details_left .insurance_section{
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.384);
+    border-radius: 4px;
+    margin-top: 1.4rem;
+    padding: 10px 20px;
+}
+section .details .details_left .insurance_section .insurance_header{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-bottom: 10px;
+}
+section .details .details_left .insurance_section .insurance_header .insurance_icon{
+    width: 27px;
+    height: 30px;
+    background-image: url(../image/img-sprit.png);
+    background-position: -229px -48px;
+}
+section .details .details_left .insurance_section .insurance_header .insurance_head h2{
+    font-size: 15px;
+    margin-left: 5px;
+}
+section .details .details_left .insurance_section .insurance_header .insurance_head p{
+    font-size: 12px;
+}
+section .details .details_left .insurance_section .insurance_header .icon_drawer img{
+    width: 50px;
+}
+section .details .details_left .insurance_section .insurance_header .icon_drawer i{
+    cursor: pointer;
+}
+section .details .details_left .insurance_section .insurance_benefit{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+section .details .details_left .insurance_section .insurance_benefit .benefit{
+    width: 23.5%;
+    height: 125px;
+    background-color: rgb(255, 251, 251);
+    border: 0.4px solid rgb(214, 212, 212);
+    box-shadow: 0px 0px 1px rgb(138, 138, 138);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+section .details .details_left .insurance_section .insurance_benefit .benefit img{
+    width: 40px;
+}
+section .details .details_left .insurance_section .insurance_benefit .benefit .benefit_what{
+    font-size: 13px;
+    font-weight: bold;
+}
+section .details .details_left .insurance_section .insurance_benefit .benefit .insured{
+    font-size: 13px;
+}
+section .details .details_left .insurance_section .insurance_benefit .benefit a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+section .details .details_left .insurance_section .insurance_select{
+    margin-top: 10px;
+}
+section .details .details_left .insurance_section .insurance_select label{
+    font-size: 13px;
+}
+section .details .details_left .insurance_section .insurance_select .how_much_customer{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #0e631a;
+    margin-left: 1rem;
+    background-color: #3be352b4;
+    width: 50%;
+    border-radius: 4px;
+    font-size: 13px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+section .details .details_left .contact_information{
+    margin-top: 1.4rem;
+    margin-bottom: 2rem;
+}
+section .details .details_left .contact_information p{
+    font-size: 13px;
+}
+section .details .details_left .contact_information p span{
+    font-size: 18px;
+}
+section .details .details_left .contact_information input{
+    width: 60%;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.384);
+    border-radius: 4px;
+    padding-left: 3rem;
+    font-size: 20px;
+    margin: 10px 0px 5px 0px;
+    outline: none;
+    position: relative;
+}
+
+section .details .details_left .contact_information .input_field{
+    position: relative;
+}
+section .details .details_left .contact_information .input_field::before{
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    /* background-color: rebeccapurple; */
+    background-image: url(../image/emai-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+::placeholder{
+    color: #aaa;
+}
+.alert{
+    color: rgba(236, 34, 34, 0.852);
+}
+section .details .details_left .contact_information .input_field button{
+    height: 50px;
+    border: none;
+    background-color: chocolate;
+    border-radius: 4px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.384);
+}
+section .details .details_left .form_information_details .traverllers_details{
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.384);
+    overflow: hidden;
+    border-radius: 4px;
+}
+section .details .details_left .form_information_details .traverllers_details .traverllers_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 251, 251);
+    padding: 10px 20px;
+}
+
+section .details .details_left .form_information_details .traverllers_details .traverllers_head .traverller_heading{
+    width: 200px;
+}
+section .details .details_left .form_information_details .traverllers_details .traverllers_head .traverller_heading h2{
+    font-size: 16px;
+    line-height: 35px;
+}
+section .details .details_left .form_information_details .traverller_heading::before{
+    content: "";
+    float: left;
+    background-image: url(../image/img-sprit.png);
+    height: 34px;
+    width: 35px;
+    margin-right: 5px;
+    background-position: -92px -85px;
+}
+section .details .details_left .form_information_details .traverllers_details .traverllers_head .traverller_instruction{
+    display: flex;
+    align-items: center;
+}
+section .details .details_left .form_information_details .traverllers_details .traverllers_head .traverller_instruction img{
+    width: 20px;
+    margin-right: 5px;
+}
+section .details .details_left .form_information_details .traverllers_details .traverllers_head .traverller_instruction p{
+    font-size: 11px;
+    color: #2196f3;
+}
+section .details .details_left .form_information_details .traverllers_details .traveller_information{
+    padding: 20px 10px 10px 10px;
+}
+section .details .details_left .form_information_details .traverllers_details .traveller_information h2{
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+section .details .details_left .form_information_details .traverllers_details .traveller_information .adult_details{
+    box-shadow: 0px 0px 3px rgba(138, 137, 137, 0.384);
+    border-radius: 4px;
+    padding: 20px 20px 0px 20px;
+}
+section .details .details_left .form_information_details .traverllers_details .traveller_information .adult_details .check_adult_drawer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .details .details_left .form_information_details .traverllers_details .traveller_information .adult_details .check_adult_drawer .check_adult{
+    display: flex;
+    align-items: center;
+}
+section .details .details_left .form_information_details .traverllers_details .traveller_information .adult_details .check_adult_drawer .check_adult input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+    margin-right: 6px;
+}
+section .details .details_left .form_information_details .traverllers_details .traveller_information .adult_details .check_adult_drawer .check_adult label{
+    line-height: 30px;
+}
